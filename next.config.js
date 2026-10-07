@@ -6,7 +6,10 @@ import("./env.mjs");
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // Public-pages-only static deploy (landing, blog, docs) on Cloudflare Workers.
+  output: "export",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
